@@ -59,24 +59,24 @@ const Gallery = () => {
             imgsrc: img10,
         }
     ]
-    const [model, setModel] = useState(false);
-    const [tempimgsrc, settempimgsrc] = useState('');
+    // const [model, setModel] = useState(false);
+    // const [tempimgsrc, settempimgsrc] = useState('');
 
-    const getImg = (imgsrc) => {
-        settempimgsrc(imgsrc);
-        setModel(true);
-    }
+    // const getImg = (imgsrc) => {
+    //     settempimgsrc(imgsrc);
+    //     setModel(true);
+    // }
 
     return (
         <>
-        <div className={model? "model open" : "model" }>
+        {/* <div className={model? "model open" : "model" }>
             <img src={tempimgsrc}/>
             <CloseIcon/>
-        </div>
+        </div> */}
         <div className="gallery">
             {data.map((item,index)=>{
                 return (
-                    <div className="pics" key = {index} onClick={() => getImg(item.imgsrc)}  >
+                    <div className="pics" key = {index} >
                         <img src= {item.imgsrc} />
                     </div>
                 )
